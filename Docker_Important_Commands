@@ -1,0 +1,79 @@
+Docker Build
+--------------------
+1) To Build a Docker Image 
+
+   > docker build -t spring-boot-demo .
+   
+2) TO check the Docker Images 
+   
+   > docker images
+   
+3) Build Docker Image with Tag Name 
+
+   > docker build -t springboot-docker-demo:0.1.RELEASE .
+   
+---------------------------------
+Docker Run
+---------------------------------
+ 
+4) Run the Docker image
+   
+   > docker run -p 8080:8080 springboot-docker-demo
+   
+5) To check how many docker images are running
+
+   > docker ps  
+   
+6) How to host the container image on different port number 
+
+  > docker run -p 8081:8080 springboot-docker-demo
+  
+  Note : The app will run on 8081
+  
+---------------------------------
+Docker Run in Detach Mode
+---------------------------------
+ 
+7) How to run the image in Detached mode(background)
+
+  > docker run -p 8082:8080 -d springboot-docker-demo
+  
+  Note : Here, -d : detached mode
+
+8) How to check the logs if the image running on background
+  
+  > docker logs -f ed9b
+  
+  Note : here ed9b is the first 4 letters of the unique detached id we can get after running the detached command
+  
+  
+--------------------------------
+Docker Stop
+---------------------------------
+
+9) To stop the docker container
+
+  > docker stop 40d9
+  
+  Note: here, 40d9: first four letters of unique id, we can get from > docker ps command 
+  
+---------------------------------------
+ Docker Push
+---------------------------------------
+  
+ 10) Login from command promot using
+ 
+ > docker login
+
+ 11) tag your local image to dockerhub id by using below command
+ 
+ > docker tag springboot-docker-demo adapaganesh1998/springboot-docker-demo:0.1.RELEASE
+ 
+ Note : here, tag : used to link, adapaganesh1998 : is dockerhub id
+ 
+ 12) Docker push
+ 
+ > docker push adapaganesh1998/springboot-docker-demo:0.1.RELEASE
+ 
+ 
+   
