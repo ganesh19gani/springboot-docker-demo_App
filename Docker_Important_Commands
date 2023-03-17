@@ -75,5 +75,14 @@ Docker Stop
  
  > docker push adapaganesh1998/springboot-docker-demo:0.1.RELEASE
  
+  
+ ----------------------------------------
+ Doker Pull
+ -----------------------------------------
+ 
+ > docker pull adapaganesh1998/springboot-docker-demo:0.1.RELEASE
+ 
+ note : 0.1.RELEASE : is tag, if we didn't provide by default it will take latest as tagname
+ 
  
    
